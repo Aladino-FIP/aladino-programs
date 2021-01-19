@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Pin",
+        "type": "pin",
+        "variable": "door_pin",
+        "constraint": {
+            "type": "digital",
+            "required": true
+        }
+    },
+    {
+        "name": "Messaggio",
+        "type": "text",
+        "variable": "message",
+        "constraint": {
+            "max": 1000,
+            "required": true
+        }
+    },
+    {
+        "name": "Email alla chiusura del contatto",
+        "type": "boolean",
+        "variable": "on_close"
+    },
+    {
+        "name": "Email all'apertura del contatto",
+        "type": "boolean",
+        "variable": "on_open"
+    }
+]

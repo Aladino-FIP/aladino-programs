@@ -1,0 +1,18 @@
+[
+    {
+        "id": 0,
+        "code": "if(vars.on_close) SendEmail(vars.message);",
+        "onPin": {
+            "at": "hi",
+            "pin_var": "door_pin"
+        }
+    },
+    {
+        "id": 1,
+        "code": "if(vars.on_open) SendEmail(vars.message);",
+        "onPin": {
+            "at": "lo",
+            "pin_var": "door_pin"
+        }
+    }
+]
