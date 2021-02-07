@@ -1,0 +1,13 @@
+[
+  {
+    "id": 0,
+    "code": "SendTimeRelay(vars.door_pin, 0, vars.door_duration, 255, -1);",
+    "on": {
+      "type": "button",
+      "active": "true",
+      "classes": "btn-primary",
+      "name": "door_open",
+      "text": "Apri porta"
+    }
+  }
+]
