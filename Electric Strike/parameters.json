@@ -1,22 +1,24 @@
 [
-  {
-    "name": "Pin",
-    "type": "pin",
-    "variable": "door_pin",
-    "constraint": {
-      "type": "digital",
-      "direction":  "output",
-      "required": true
-    }
-  },
-  {
-    "name": "Intervallo (millisecondi)",
-    "type": "number",
-    "variable": "door_duration",
-    "constraint": {
-      "max": "100000",
-      "required": true
+    {
+        "name": "Pin",
+        "type": "pin",
+        "variable": "door_pin",
+        "constraint": {
+            "type": "digital",
+            "required": true,
+            "direction": "output"
+        }
     },
-    "default": 1500
-  }
+    {
+        "name": "Intervallo (millisecondi)",
+        "type": "number",
+        "default": 1500,
+        "variable": "door_duration",
+        "constraint": {
+            "max": 10000,
+            "min": 0,
+            "integer": true,
+            "required": true
+        }
+    }
 ]
