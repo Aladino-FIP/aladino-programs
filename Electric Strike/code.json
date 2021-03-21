@@ -1,13 +1,39 @@
-[
-    {
+[{
         "id": 0,
         "on": {
             "name": "door_open",
             "text": "Apri porta",
             "type": "button",
-            "active": "true",
+            "active": true,
             "classes": "btn-primary"
         },
         "code": "SendTimeRelay(vars.door_pin, 0, vars.door_duration, 255, -1);"
+    },
+    {
+        "id": 1,
+        "onPin": {
+            "pin_var": "door_pin",
+            "at": "hi"
+        },
+        "code": "SetControlActive('door_open', false); SetControlActive('door_opened', true);"
+    },
+    {
+        "id": 2,
+        "onPin": {
+            "pin_var": "door_pin",
+            "at": "lo"
+        },
+        "code": "SetControlActive('door_open', true); SetControlActive('door_opened', false);"
+    },
+    {
+        "id": 3,
+        "on": {
+            "name": "door_opened",
+            "text": "Porta aperta",
+            "type": "button",
+            "active": false,
+            "classes": "btn-warning"
+        },
+        "code": ""
     }
 ]
