@@ -1,0 +1,10 @@
+[{
+    "name": "Pin",
+    "type": "pin",
+    "variable": "lamp_pin",
+    "constraint": {
+        "type": "digital",
+        "required": true,
+        "direction": "output"
+    }
+}]

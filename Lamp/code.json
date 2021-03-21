@@ -1,0 +1,39 @@
+[{
+        "id": 0,
+        "on": {
+            "name": "lamp_on",
+            "text": "Accendi luce",
+            "type": "button",
+            "active": true,
+            "classes": "btn-success"
+        },
+        "code": "SendValue(vars.lamp_pin, 255);"
+    },
+    {
+        "id": 1,
+        "on": {
+            "name": "lamp_off",
+            "text": "Spegni luce",
+            "type": "button",
+            "active": false,
+            "classes": "btn-danger"
+        },
+        "code": "SendValue(vars.lamp_pin, 0);"
+    },
+    {
+        "id": 2,
+        "onPin": {
+            "pin_var": "lamp_pin",
+            "at": "hi"
+        },
+        "code": "SetControlActive('lamp_on', false); SetControlActive('lamp_off', true);"
+    },
+    {
+        "id": 3,
+        "onPin": {
+            "pin_var": "lamp_pin",
+            "at": "lo"
+        },
+        "code": "SetControlActive('lamp_on', true); SetControlActive('lamp_off', false);"
+    }
+]
