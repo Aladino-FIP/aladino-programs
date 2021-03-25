@@ -1,5 +1,4 @@
-[
-    {
+[{
         "name": "Pin",
         "type": "pin",
         "variable": "door_pin",
