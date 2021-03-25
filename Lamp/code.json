@@ -7,7 +7,7 @@
             "active": true,
             "classes": "btn-success"
         },
-        "code": "SendValue(vars.lamp_pin, 255);"
+        "code": "SendValue(vars.lamp_pin, 255); History('lamp.on')"
     },
     {
         "id": 1,
@@ -18,22 +18,22 @@
             "active": false,
             "classes": "btn-danger"
         },
-        "code": "SendValue(vars.lamp_pin, 0);"
+        "code": "SendValue(vars.lamp_pin, 0); History('lamp.off');"
     },
     {
         "id": 2,
+        "code": "SetControlActive('lamp_on', false); SetControlActive('lamp_off', true);",
         "onPin": {
-            "pin_var": "lamp_pin",
-            "at": "hi"
-        },
-        "code": "SetControlActive('lamp_on', false); SetControlActive('lamp_off', true);"
+            "at": "hi",
+            "pin_var": "lamp_pin"
+        }
     },
     {
         "id": 3,
+        "code": "SetControlActive('lamp_on', true); SetControlActive('lamp_off', false);",
         "onPin": {
-            "pin_var": "lamp_pin",
-            "at": "lo"
-        },
-        "code": "SetControlActive('lamp_on', true); SetControlActive('lamp_off', false);"
+            "at": "lo",
+            "pin_var": "lamp_pin"
+        }
     }
 ]
