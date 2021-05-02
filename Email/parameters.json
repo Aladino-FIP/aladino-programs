@@ -19,12 +19,12 @@
     },
     {
         "name": "Email alla chiusura del contatto",
-        "type": "boolean",
+        "type": "bool",
         "variable": "on_close"
     },
     {
         "name": "Email all'apertura del contatto",
-        "type": "boolean",
+        "type": "bool",
         "variable": "on_open"
     }
 ]
