@@ -7,11 +7,11 @@
             "active": true,
             "classes": "btn-primary"
         },
-        "code": "SendTimeRelay(vars.door_pin, 0, vars.door_duration, 255, -1); History('door.open');"
+        "code": "SendTimeRelay(vars.door_pin, 0, vars.door_duration, vars.nc ? 0 : 255, -1); History('door.open');"
     },
     {
         "id": 1,
-        "code": "SetControlActive('door_open', false); SetControlActive('door_opened', true);",
+        "code": "SetControlActive('door_open', vars.nc ^ false); SetControlActive('door_opened', vars.nc ^ true);",
         "onPin": {
             "at": "hi",
             "pin_var": "door_pin"
@@ -19,7 +19,7 @@
     },
     {
         "id": 2,
-        "code": "SetControlActive('door_open', true); SetControlActive('door_opened', false);",
+        "code": "SetControlActive('door_open', vars.nc ^ true); SetControlActive('door_opened', vars.nc ^ false);",
         "onPin": {
             "at": "lo",
             "pin_var": "door_pin"
@@ -34,6 +34,6 @@
             "active": false,
             "classes": "btn-warning"
         },
-        "code": "SendValue(vars.door_pin, 0);"
+        "code": "SendValue(vars.door_pin, vars.nc ? 255 : 0);"
     }
 ]

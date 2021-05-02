@@ -19,5 +19,11 @@
             "integer": true,
             "required": true
         }
+    },
+
+    {
+        "name": "Contatto normalmente chiuso",
+        "type": "bool",
+        "variable": "nc"
     }
 ]
