@@ -1,4 +1,5 @@
-[{
+[
+    {
         "name": "Pin di ascolto",
         "type": "pin",
         "variable": "input_pin",
