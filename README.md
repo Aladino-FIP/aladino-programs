@@ -8,3 +8,10 @@ If you are a customer of the Aladino platform and would like for a custom progra
 Questi sono i codici sorgente per tutti i programmi disponibili su https://aladino.italiandoors.it
 
 Se sei un cliente della piattaforma Aladino e desideri un programma personalizzato aggiunto contattami su achillemerendino@outlook.com
+
+# Structure of the repository
+Each folder in the repository contains the source code for one of the program available through the Aladino platform.
+Each folder contains two to three files:
+- `code.json` Program logic and events definitions
+- `paramters.json` Program variables that can be modified by the user
+- `events.json` *optional* Human readable version of `History()` tags
