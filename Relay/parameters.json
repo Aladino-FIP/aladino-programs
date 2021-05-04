@@ -1,4 +1,5 @@
-[{
+[
+    {
         "name": "Pin",
         "type": "pin",
         "variable": "relay_pin",

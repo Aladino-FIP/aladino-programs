@@ -1,4 +1,5 @@
-[{
+[
+    {
         "name": "Pin",
         "type": "pin",
         "variable": "door_pin",
@@ -20,7 +21,6 @@
             "required": true
         }
     },
-
     {
         "name": "Contatto normalmente chiuso",
         "type": "bool",

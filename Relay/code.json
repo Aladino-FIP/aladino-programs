@@ -1,39 +1,40 @@
-[{
-    "id": 0,
-    "on": {
-        "name": "relay_on",
-        "text": "Attiva",
-        "type": "button",
-        "active": true,
-        "classes": "btn-success"
+[
+    {
+        "id": 0,
+        "on": {
+            "name": "relay_on",
+            "text": "Attiva",
+            "type": "button",
+            "active": true,
+            "classes": "btn-success"
+        },
+        "code": "SendValue(vars.relay_pin, vars.nc? 0 : 255); History(vars.nc? 'relay.open' : 'relay.close')"
     },
-    "code": "SendValue(vars.relay_pin, vars.nc? 0 : 255); History(vars.nc? 'relay.open' : 'relay.close')"
-},
-{
-    "id": 1,
-    "on": {
-        "name": "relay_off",
-        "text": "Disattiva",
-        "type": "button",
-        "active": false,
-        "classes": "btn-danger"
+    {
+        "id": 1,
+        "on": {
+            "name": "relay_off",
+            "text": "Disattiva",
+            "type": "button",
+            "active": false,
+            "classes": "btn-danger"
+        },
+        "code": "SendValue(vars.relay_pin, vars.nc? 255 : 0);  History(vars.nc? 'relay.close' : 'relay.open')"
     },
-    "code": "SendValue(vars.relay_pin, vars.nc? 255 : 0);  History(vars.nc? 'relay.close' : 'relay.open')"
-},
-{
-    "id": 2,
-    "code": "SetControlActive('relay_on', vars.nc ^ false); SetControlActive('relay_off', vars.nc ^ true);",
-    "onPin": {
-        "at": "hi",
-        "pin_var": "relay_pin"
+    {
+        "id": 2,
+        "code": "SetControlActive('relay_on', vars.nc ^ false); SetControlActive('relay_off', vars.nc ^ true);",
+        "onPin": {
+            "at": "hi",
+            "pin_var": "relay_pin"
+        }
+    },
+    {
+        "id": 3,
+        "code": "SetControlActive('relay_on', vars.nc ^ true); SetControlActive('relay_off', vars.nc ^ false);",
+        "onPin": {
+            "at": "lo",
+            "pin_var": "relay_pin"
+        }
     }
-},
-{
-    "id": 3,
-    "code": "SetControlActive('relay_on', vars.nc ^ true); SetControlActive('relay_off', vars.nc ^ false);",
-    "onPin": {
-        "at": "lo",
-        "pin_var": "relay_pin"
-    }
-}
 ]
