@@ -1,0 +1,18 @@
+[
+    {
+        "id": 0,
+        "code": "SendValue(vars.output_pin, vars.invert? 0 : 255);",
+        "onPin": {
+            "at": "hi",
+            "pin_var": "input_pin"
+        }
+    },
+    {
+        "id": 1,
+        "code": "SendValue(vars.output_pin, vars.invert? 255 : 0);",
+        "onPin": {
+            "at": "lo",
+            "pin_var": "input_pin"
+        }
+    }
+]

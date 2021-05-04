@@ -1,0 +1,25 @@
+[{
+        "name": "Pin di ascolto",
+        "type": "pin",
+        "variable": "input_pin",
+        "constraint": {
+            "type": "digital",
+            "required": true
+        }
+    },
+    {
+        "name": "Pin di uscita",
+        "type": "pin",
+        "variable": "output_pin",
+        "constraint": {
+            "type": "digital",
+            "required": true,
+            "direction": "output"
+        }
+    },
+    {
+        "name": "Inverti stato",
+        "type": "bool",
+        "variable": "invert"
+    }
+]
