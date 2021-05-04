@@ -1,0 +1,40 @@
+[{
+        "name": "Pin",
+        "type": "pin",
+        "variable": "relay_pin",
+        "constraint": {
+            "type": "digital",
+            "required": true,
+            "direction": "output"
+        }
+    },
+    {
+        "name": "Ritardo (millisecondi)",
+        "type": "number",
+        "default": 0,
+        "variable": "relay_delay",
+        "constraint": {
+            "max": 2147483648,
+            "min": 0,
+            "integer": true,
+            "required": true
+        }
+    },
+    {
+        "name": "Durata (millisecondi)",
+        "type": "number",
+        "default": 1000,
+        "variable": "relay_duration",
+        "constraint": {
+            "max": 2147483648,
+            "min": 0,
+            "integer": true,
+            "required": true
+        }
+    },
+    {
+        "name": "Contatto normalmente chiuso",
+        "type": "bool",
+        "variable": "nc"
+    }
+]

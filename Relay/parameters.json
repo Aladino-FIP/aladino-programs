@@ -1,0 +1,16 @@
+[{
+        "name": "Pin",
+        "type": "pin",
+        "variable": "relay_pin",
+        "constraint": {
+            "type": "digital",
+            "required": true,
+            "direction": "output"
+        }
+    },
+    {
+        "name": "Contatto normalmente chiuso",
+        "type": "bool",
+        "variable": "nc"
+    }
+]
