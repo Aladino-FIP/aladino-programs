@@ -1,0 +1,110 @@
+[
+    {
+        "name": "Lettore Esterno",
+        "type": "pin",
+        "variable": "external_reader_pin",
+        "constraint": {
+            "type": "digital",
+            "required": true,
+            "direction": "input"
+        }
+    },
+    {
+        "name": "Lettore Interno",
+        "type": "pin",
+        "variable": "internal_reader_pin",
+        "constraint": {
+            "type": "digital",
+            "required": true,
+            "direction": "input"
+        }
+    },
+    {
+        "name": "Contatto Finestra",
+        "type": "pin",
+        "variable": "window_pin",
+        "constraint": {
+            "type": "digital",
+            "required": false,
+            "direction": "input"
+        }
+    },
+    {
+        "name": "Porta",
+        "type": "pin",
+        "variable": "door_pin",
+        "constraint": {
+            "type": "digital",
+            "required": true,
+            "direction": "output"
+        }
+    },
+    {
+        "name": "Luci",
+        "type": "pin",
+        "variable": "lights_pin",
+        "constraint": {
+            "type": "digital",
+            "required": true,
+            "direction": "output"
+        }
+    },
+    {
+        "name": "Climatizzatore",
+        "type": "pin",
+        "variable": "ac_pin",
+        "constraint": {
+            "type": "digital",
+            "required": true,
+            "direction": "output"
+        }
+    },
+    {
+        "name": "Durata serratura (millisecondi)",
+        "type": "number",
+        "default": 500,
+        "variable": "door_duration",
+        "constraint": {
+            "max": 5000,
+            "min": 100,
+            "integer": true,
+            "required": true
+        }
+    },
+    {
+        "name": "Durata corrente dopo apertura porta (millisecondi)",
+        "type": "number",
+        "default": 180000,
+        "variable": "door_current_duration",
+        "constraint": {
+            "max": 600000,
+            "min": 500,
+            "integer": true,
+            "required": true
+        }
+    },
+    {
+        "name": "Durata corrente dopo rimozione card (millisecondi)",
+        "type": "number",
+        "default": 300000,
+        "variable": "card_removed_duration",
+        "constraint": {
+            "max": 600000,
+            "min": 500,
+            "integer": true,
+            "required": true
+        }
+    },
+    {
+        "name": "Attivazione risparmio energetico sul clima (millisecondi)",
+        "type": "number",
+        "default": 300000,
+        "variable": "window_open_duration",
+        "constraint": {
+            "max": 600000,
+            "min": 500,
+            "integer": true,
+            "required": true
+        }
+    }
+]

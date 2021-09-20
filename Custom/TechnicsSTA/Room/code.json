@@ -1,0 +1,42 @@
+[
+    {
+      "id": 0,
+      "onPin": {
+        "at": "hi",
+        "pin_var": "external_reader_pin"
+      },
+      "code": "SendTimeRelay(vars.door_pin, 0, vars.door_duration, 255, -1); ReadActualValue(vars.internal_reader_pin).then(value => { if (value === 0) {  SendTimeRelay(vars.lights_pin, 0, vars.door_current_duration, 255, -1); ReadActualValue(vars.window_pin).then(value => { if (value === 0) { SendTimeRelay(vars.ac_pin, 0, vars.door_current_duration, 255, -1); } }); } });"
+    },
+    {
+      "id": 1,
+      "onPin": {
+        "at": "hi",
+        "pin_var": "internal_reader_pin"
+      },
+      "code": "SendTimeRelay(vars.lights_pin, 0, 500, 255, 255); ReadActualValue(vars.window_pin).then(value => { if (value == 0) { SendTimeRelay(vars.ac_pin, 0, 500, 255, 255); } });"
+    },
+    {
+      "id": 2,
+      "onPin": {
+        "at": "lo",
+        "pin_var": "internal_reader_pin"
+      },
+      "code": "SendTimeRelay(vars.lights_pin, vars.card_removed_duration, vars.card_removed_duration + 1, 0, 0); SendTimeRelay(vars.ac_pin, vars.card_removed_duration, vars.card_removed_duration + 1, 0, 0);"
+    },
+    {
+      "id": 3,
+      "onPin": {
+        "at": "hi",
+        "pin_var": "window_pin"
+      },
+      "code": "SendTimeRelay(vars.ac_pin, vars.window_open_duration, vars.window_open_duration + 1, 0, 0);"
+    },
+    {
+      "id": 4,
+      "onPin": {
+        "at": "lo",
+        "pin_var": "window_pin"
+      },
+      "code": "ReadActualValue(vars.internal_reader_pin).then(value => { if (value == 255) { SendTimeRelay(vars.ac_pin, 0, 1, 255, 255); } });"
+    }
+  ]
