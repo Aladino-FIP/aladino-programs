@@ -8,7 +8,7 @@
             "active": true,
             "classes": "btn-primary"
         },
-        "code": "SendTimeRelay(vars.door_pin, 0, vars.door_duration, vars.nc ? 0 : 255, -1); History('door.open');"
+        "code": "SendTimeRelay(vars.door_pin, 0, vars.door_duration, vars.nc ? 0 : 255, -1); History('door.open'); if(vars.send_mail) { SendEmail('Porta aperta dall\\'utente ' + user.name); }"
     },
     {
         "id": 1,

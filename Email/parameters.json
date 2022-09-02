@@ -5,6 +5,7 @@
         "variable": "door_pin",
         "constraint": {
             "type": "digital",
+            "direction": "input",
             "required": true
         }
     },

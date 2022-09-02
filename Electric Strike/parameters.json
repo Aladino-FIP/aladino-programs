@@ -25,5 +25,10 @@
         "name": "Contatto normalmente chiuso",
         "type": "bool",
         "variable": "nc"
+    },
+    {
+        "name": "Invia email all'apertura",
+        "type": "bool",
+        "variable": "send_mail"
     }
 ]
