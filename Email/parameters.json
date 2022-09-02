@@ -12,6 +12,7 @@
         "name": "Messaggio",
         "type": "text",
         "variable": "message",
+        "default": "Qualcuno ha attivato il contatto!",
         "constraint": {
             "max": 1000,
             "required": true
